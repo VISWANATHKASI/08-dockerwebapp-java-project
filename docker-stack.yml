@@ -2,15 +2,14 @@
 version: "3"
 services:
  devopsdb:
-   image: viswanathkasi/dbimage
+   image: viswanathkasi/java-stack-dbimage
    ports:
      - "3306:3306"
    deploy:
      replicas: 1
 
  application:
-   image: viswanathkasi/appimage
-   container_name: containerapp
+   image: viswanathkasi/java-stack-appimage
    ports:
      - "1234:8080"
    deploy:
