@@ -1,14 +1,14 @@
 ---
-version: "3"
+version: "3.8"
 services:
  devopsdb:
    container_name: devopsdb
-   image: viswanathkasi/dbimage
+   image: viswanathkasi/java-stack-dbimage
    ports:
      - "3306:3306"
 
  application:
-   image: viswanathkasi/appimage
+   image: viswanathkasi/java-stack-appimage
    container_name: containerapp
    ports:
      - "5000:8080"
