@@ -11,7 +11,7 @@ services:
  application:
    image: viswanathkasi/java-stack-appimage
    ports:
-     - "1234:8080"
+     - "5000:8080"
    deploy:
      replicas: 3
    depends_on:
