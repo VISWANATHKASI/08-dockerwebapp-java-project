@@ -1,0 +1,19 @@
+---
+version: "3"
+services:
+ devopsdb:
+   image: viswanathkasi/dbimage
+   ports:
+     - "3306:3306"
+   deploy:
+     replicas: 1
+
+ application:
+   image: viswanathkasi/appimage
+   container_name: containerapp
+   ports:
+     - "1234:8080"
+   deploy:
+     replicas: 3
+   depends_on:
+     - "devopsdb"
