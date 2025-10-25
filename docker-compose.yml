@@ -23,4 +23,5 @@ services:
    
 
 networks:
-  app: overlay
+  app:
+    driver: overlay
