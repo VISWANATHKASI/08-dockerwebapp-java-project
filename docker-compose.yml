@@ -7,8 +7,6 @@ services:
    #image: viswanathkasi/java-stack-dbimage
    ports:
      - "3306:3306"
-   networks:
-     - app
      
  application:
    #image: viswanathkasi/java-stack-appimage
@@ -16,12 +14,6 @@ services:
    container_name: containerapp
    ports:
      - "8081:8080"
-   networks:
-     - app
    depends_on:
      - "devopsdb"
-   
-
-networks:
-  app:
-    driver: overlay
+  
